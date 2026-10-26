@@ -1,0 +1,3 @@
+-- Baseline migration for core-service.
+-- Intentionally empty: it establishes Flyway's schema history so that
+-- domain tables (tenants, plants, machines, ...) start at V2 in stage 2.

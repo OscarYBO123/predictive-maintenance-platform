@@ -1,0 +1,34 @@
+spring:
+  application:
+    name: core-service
+  # Reuse the repository-root .env (shared with Docker Compose) when running locally.
+  # Real environment variables always take precedence.
+  config:
+    import: optional:file:../../.env[.properties]
+  threads:
+    virtual:
+      enabled: true
+  datasource:
+    url: jdbc:postgresql://${POSTGRES_HOST:localhost}:${POSTGRES_PORT:5432}/${POSTGRES_DB:pmp}
+    username: ${POSTGRES_USER:pmp}
+    password: ${POSTGRES_PASSWORD:}
+  jpa:
+    open-in-view: false
+    hibernate:
+      # Flyway is the single source of truth for the schema.
+      ddl-auto: validate
+  flyway:
+    locations: classpath:db/migration
+
+server:
+  port: ${SERVER_PORT:8080}
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+  endpoint:
+    health:
+      probes:
+        enabled: true

@@ -25,11 +25,26 @@
     </properties>
 
     <modules>
-        <!-- services/* are added here as they are created -->
+        <module>services/core-service</module>
     </modules>
 
     <build>
         <plugins>
+            <!-- Unit tests (*Test, *Tests) run in the test phase. -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <configuration>
+                    <excludes>
+                        <exclude>**/*IT.java</exclude>
+                    </excludes>
+                </configuration>
+            </plugin>
+            <!-- Integration tests (*IT) run in integration-test/verify; executions come from the Boot parent. -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-failsafe-plugin</artifactId>
+            </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-enforcer-plugin</artifactId>
