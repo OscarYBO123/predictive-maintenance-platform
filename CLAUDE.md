@@ -21,11 +21,16 @@ Su objetivo es **aprender arquitectura moderna y a dirigir IA**, no solo obtener
   antes de fijar una dependencia.
 - Si algo es ambiguo, pregúntame en vez de suponer.
 - Nunca hagas `git push`, crees repositorios o abras PRs sin que yo lo pida.
+- Al terminar cada paso, marca su casilla `[x]` en `docs/PLAN.md` y pon `[~]` en el siguiente,
+  dentro del mismo commit del paso.
+- Si en un paso aparece un término técnico nuevo, agrégalo al glosario de `docs/PLAN.md` con una
+  explicación de una línea, pensada para alguien que apenas lo conoce.
 
 ## Idiomas
 
 - Código, nombres, comentarios, mensajes de commit, README y ADRs: **inglés**.
 - Conversación y explicaciones conmigo: **español**.
+- Excepción: `docs/PLAN.md` (plan y glosario) se escribe en **español**.
 
 ## Arquitectura objetivo
 
@@ -80,6 +85,7 @@ pom.xml                 # agregador Maven de services/*
 services/<servicio>/    # un proyecto Spring Boot por microservicio
 frontend/               # app Angular
 infra/compose/          # docker-compose.yml y configuración local
+docs/PLAN.md            # plan de trabajo y glosario (en español)
 docs/adr/               # Architecture Decision Records
 .github/workflows/      # CI
 ```
