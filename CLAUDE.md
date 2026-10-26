@@ -29,12 +29,25 @@ Su objetivo es **aprender arquitectura moderna y a dirigir IA**, no solo obtener
 
 ## Arquitectura objetivo
 
+```mermaid
+flowchart LR
+    sim[simulator] -- "Kafka: telemetry" --> tp[telemetry-processor]
+    tp --> tsdb[(TimescaleDB)]
+    tp -- WebSocket --> fe[frontend<br/>Angular]
+    tp -- "Kafka: anomalies" --> core[core-service]
+    tp -- "Kafka: anomalies" --> ai[ai-agent<br/>Spring AI]
+    core --> pg[(PostgreSQL)]
+    fe -- REST --> core
+    fe -- chat --> ai
+    ai -- tools --> core
+    kc[Keycloak<br/>OIDC] -. auth .- fe
+    kc -. auth .- core
+    kc -. auth .- ai
 ```
-simulator ──(Kafka: telemetry)──> telemetry-processor ──> TimescaleDB
-                                         │
-                                         ├──(WebSocket)──> frontend (dashboard en vivo)
-                                         └──(Kafka: anomalies)──> core-service / ai-agent
 
+> Mantener idéntico al diagrama de `README.md`.
+
+```
 core-service : empresas (tenants), plantas, máquinas, técnicos, alertas, órdenes de trabajo
 ai-agent     : Spring AI; explica anomalías y agenda mantenimiento usando herramientas
 frontend     : Angular; dashboard, administración y chat con el agente
@@ -82,8 +95,7 @@ docs/adr/               # Architecture Decision Records
 
 ## Convenciones
 
-- **Paquete base:** `io.github.<usuario-github>.pmp.<servicio>`
-  (obtén el usuario con `gh api user -q .login`).
+- **Paquete base:** `io.github.oscarybo123.pmp.<servicio>` (ej. `io.github.oscarybo123.pmp.core`).
 - Organización por funcionalidad (package-by-feature), no por capa técnica.
 - DTOs como `record`; inyección por constructor; sin Lombok.
 - API REST versionada (`/api/v1/...`), documentada con springdoc-openapi.

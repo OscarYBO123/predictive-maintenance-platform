@@ -123,7 +123,7 @@ if command -v code > /dev/null 2>&1; then
   ok "VS Code was already installed"
 else
   read -rp "    Install VS Code? [Y/n]: " WANT_CODE
-  if [[ "${WANT_CODE:-S}" =~ ^[SsYy]$ ]]; then
+  if [[ "${WANT_CODE:-Y}" =~ ^[SsYy]$ ]]; then
     sudo snap install code --classic
     ok "VS Code installed"
   else
