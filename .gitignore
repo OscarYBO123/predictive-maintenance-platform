@@ -1,0 +1,52 @@
+# ---------- Environment / secrets ----------
+.env
+.env.*
+!.env.example
+
+# ---------- Java / Maven ----------
+target/
+*.class
+*.log
+hs_err_pid*
+replay_pid*
+.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+# ---------- Node / Angular ----------
+node_modules/
+dist/
+out-tsc/
+coverage/
+.angular/
+.npm/
+npm-debug.log*
+yarn-error.log*
+.sass-cache/
+/frontend/test-results/
+
+# ---------- IDEs ----------
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+.classpath
+.project
+.settings/
+.factorypath
+.apt_generated/
+.sts4-cache/
+bin/
+nbproject/
+nbbuild/
+.nb-gradle/
+
+# ---------- OS ----------
+.DS_Store
+Thumbs.db
+*~
+*.swp
