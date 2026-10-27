@@ -21,9 +21,9 @@ Todavía no hace nada útil, pero demuestra que todas las piezas se conectan.
   *Por qué:* prueba que el navegador puede hablar con el backend.
 - [x] **5. PostgreSQL con Docker Compose** — base de datos levantada con un solo comando.
   *Por qué:* nada se instala en tu máquina; todo corre en contenedores.
-- [~] **6. Prueba de punta a punta** — navegador → Angular → Spring → PostgreSQL.
+- [x] **6. Prueba de punta a punta** — navegador → Angular → Spring → PostgreSQL.
   *Por qué:* confirmar que todo el camino funciona junto.
-- [ ] **7. CI y ADR 0001** — GitHub Actions compila y prueba en cada cambio; documentar decisiones.
+- [~] **7. CI y ADR 0001** — GitHub Actions compila y prueba en cada cambio; documentar decisiones.
   *Por qué:* nadie puede subir código roto sin que se note.
 - [ ] **8. Publicar en GitHub** — crear el repo, hacer push y ver el CI en verde.
 
