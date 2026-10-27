@@ -23,9 +23,9 @@ Todavía no hace nada útil, pero demuestra que todas las piezas se conectan.
   *Por qué:* nada se instala en tu máquina; todo corre en contenedores.
 - [x] **6. Prueba de punta a punta** — navegador → Angular → Spring → PostgreSQL.
   *Por qué:* confirmar que todo el camino funciona junto.
-- [~] **7. CI y ADR 0001** — GitHub Actions compila y prueba en cada cambio; documentar decisiones.
+- [x] **7. CI y ADR 0001** — GitHub Actions compila y prueba en cada cambio; documentar decisiones.
   *Por qué:* nadie puede subir código roto sin que se note.
-- [ ] **8. Publicar en GitHub** — crear el repo, hacer push y ver el CI en verde.
+- [~] **8. Publicar en GitHub** — crear el repo, hacer push y ver el CI en verde.
 
 ## Etapa 2 — Núcleo SaaS
 
@@ -117,6 +117,11 @@ Todavía no hace nada útil, pero demuestra que todas las piezas se conectan.
 | **Flyway** | Aplica los cambios a la base de datos en orden, como si fueran commits del esquema. |
 | **Testcontainers** | Levanta una base de datos real en Docker solo mientras corren las pruebas. |
 | **CI (GitHub Actions)** | Robot que compila y prueba el código cada vez que subes cambios. |
+| **Workflow / job / step** | Workflow: el archivo de CI completo. Job: un grupo de tareas en una máquina. Step: cada tarea. |
+| **Fijar por SHA** | Referenciar una action por el identificador exacto de su commit, que nadie puede cambiar después. |
+| **Artifact (CI)** | Archivo que el CI guarda al terminar (por ejemplo, reportes de pruebas) para descargarlo después. |
+| **Permisos mínimos** | Dar al CI solo los permisos que necesita (aquí, solo leer el repo), para limitar el daño si algo sale mal. |
+| **Dependabot** | Bot de GitHub que revisa si hay versiones nuevas de tus dependencias y abre PRs para actualizarlas. |
 | **ADR** | Documento corto que explica una decisión técnica y por qué se tomó. |
 | **Microservicio** | Programa pequeño con una sola responsabilidad que habla con otros. |
 | **Kafka** | "Cinta transportadora" de mensajes entre servicios. |

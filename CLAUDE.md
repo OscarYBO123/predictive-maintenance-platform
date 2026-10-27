@@ -99,7 +99,8 @@ docs/adr/               # Architecture Decision Records
 - Ejecutar core-service sin Compose (Postgres desechable): `./mvnw -pl services/core-service spring-boot:test-run`
 - Compilar y probar todo el backend: `./mvnw verify`
 - Ejecutar un servicio: `./mvnw -pl services/core-service spring-boot:run`
-- Frontend: `cd frontend && npm ci && npm start` · pruebas: `npm test`
+- Frontend: `cd frontend && npm ci && npm start` · pruebas: `npm test` · lint: `npm run lint`
+- Frontend como en CI (sin watch, reporte JUnit en `frontend/test-results/`): `npm run test:ci`
 
 ## Convenciones
 
