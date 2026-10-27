@@ -70,11 +70,15 @@ password: a missing `POSTGRES_PASSWORD` fails fast in Compose and in the applica
 
 ### Continuous integration
 
-`.github/workflows/ci.yml` runs on every push and pull request with two parallel jobs:
-backend (`./mvnw verify`, including Testcontainers ITs) and frontend (lint, test, build).
-The workflow has `permissions: contents: read`, actions are pinned to full commit SHAs, and
-test reports are uploaded as artifacts only when a job fails. Dependabot proposes weekly updates
-for Maven, npm and GitHub Actions (which also keeps the SHA pins current).
+`.github/workflows/ci.yml` runs on every pull request and on pushes to `main`, with two parallel
+jobs on `ubuntu-24.04`: backend (`./mvnw verify`, including Testcontainers ITs) and frontend
+(lint, test, build). The workflow has `permissions: contents: read`, actions are pinned to full
+commit SHAs, and test reports are uploaded as artifacts only when a job fails. Dependabot
+proposes weekly updates for Maven, npm and GitHub Actions (which also keeps the SHA pins
+current); major TypeScript bumps are ignored because Angular defines the supported range.
+
+A ruleset on `main` requires a pull request (no approvals, single maintainer) and green
+`Backend (Java 25)` and `Frontend (Node 24)` checks, and blocks force pushes and deletion.
 
 ## Alternatives considered
 
