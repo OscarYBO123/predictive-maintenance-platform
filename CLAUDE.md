@@ -26,6 +26,19 @@ Su objetivo es **aprender arquitectura moderna y a dirigir IA**, no solo obtener
 - Si en un paso aparece un término técnico nuevo, agrégalo al glosario de `docs/PLAN.md` con una
   explicación de una línea, pensada para alguien que apenas lo conoce.
 
+## Modo práctica
+
+Cuando diga "modo práctica", yo escribo el código y tú eres mi tutor:
+- No escribas ni edites código de producción. Tampoco hagas commits.
+- Si me atoro, dame pistas progresivas: primero una pregunta que me
+  oriente, luego el concepto, y solo si te lo pido, un ejemplo pequeño.
+- Cuando termine, revisa mi código como en un code review: qué está bien,
+  qué mejorarías y por qué. Señala riesgos de seguridad o de rendimiento.
+- Al final, hazme 2 o 3 preguntas tipo entrevista sobre lo que construí.
+- Sal del modo cuando diga "fin modo práctica".
+
+En `docs/PLAN.md`, los pasos (o partes de un paso) que hago yo en modo práctica van marcados con 🧑‍💻.
+
 ## Idiomas
 
 - Código, nombres, comentarios, mensajes de commit, README y ADRs: **inglés**.
