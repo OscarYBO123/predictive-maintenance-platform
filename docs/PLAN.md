@@ -1,7 +1,7 @@
 # Plan de trabajo — predictive-maintenance-platform
 
 > Lista de todo lo que vamos a construir, en orden. Se marca `[x]` al terminar cada paso.
-> Leyenda: `[x]` hecho · `[~]` en curso · `[ ]` pendiente
+> Leyenda: `[x]` hecho · `[~]` en curso · `[ ]` pendiente · 🧑‍💻 lo hace Oscar en modo práctica
 
 ---
 
@@ -33,11 +33,23 @@ Todavía no hace nada útil, pero demuestra que todas las piezas se conectan.
 **Objetivo:** la parte "administrativa": empresas, plantas, máquinas y técnicos, con login.
 
 - [~] **1. Modelo de datos** — tablas con migraciones de Flyway.
+  - Claude: migración V2 con `tenants` y `plants` (patrón de referencia).
+  - 🧑‍💻 Migración V3 con `machines` y `technicians`.
 - [ ] **2. API REST** — crear, consultar, editar y borrar, con validaciones y documentación OpenAPI.
+  - Claude: CRUD de `plants` (patrón de referencia).
+  - 🧑‍💻 CRUD de `machines` con sus pruebas.
 - [ ] **3. Keycloak** — servidor de login; el frontend inicia sesión con OIDC.
+  - Claude: Keycloak en Compose, realm exportado, resource server y login en Angular.
+  - 🧑‍💻 Crear a mano un usuario, un rol y una organización en la consola y compararlo con el realm.
 - [ ] **4. Multi-tenant** — cada empresa solo ve sus propios datos.
+  - Claude: aislamiento por tenant (pieza de seguridad crítica).
+  - 🧑‍💻 Prueba de aislamiento: el tenant A no puede ver ni modificar datos del tenant B.
 - [ ] **5. Pantallas de administración** en Angular.
+  - Claude: lista y formulario de plantas (componentes base, guards, errores).
+  - 🧑‍💻 Pantallas de máquinas.
 - [ ] **6. Flujo profesional** — a partir de aquí, trabajar con ramas y pull requests.
+  - Claude: plantilla de PR y `CODEOWNERS` (protección de `main` ya configurada).
+  - 🧑‍💻 Revisar un PR de Claude y dejar comentarios en GitHub.
 
 ## Etapa 3 — Telemetría en vivo
 
