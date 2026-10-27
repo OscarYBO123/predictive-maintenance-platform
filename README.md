@@ -75,6 +75,15 @@ docker compose -f infra/compose/docker-compose.yml up -d   # PostgreSQL
 cd frontend && npm ci && npm start                         # http://localhost:4200
 ```
 
+### Run core-service without Docker Compose
+
+`TestCoreServiceApplication` starts core-service against a throwaway PostgreSQL container
+managed by Testcontainers (only Docker is required; no `.env` needed). Data is lost on exit.
+
+```bash
+./mvnw -pl services/core-service spring-boot:test-run      # http://localhost:8080
+```
+
 ## Roadmap
 
 1. **Foundations** — monorepo, minimal core-service, minimal frontend, PostgreSQL in Compose, CI.
