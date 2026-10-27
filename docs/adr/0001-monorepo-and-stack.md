@@ -21,6 +21,14 @@ The root pom also configures the test split inherited by every service:
 Surefire runs unit tests (`*Test`, `*Tests`) and Failsafe runs integration tests (`*IT`)
 during `integration-test`/`verify`.
 
+### Frontend data fetching: `httpResource`
+
+The frontend fetches data with `httpResource` (`@angular/common/http`), which exposes value,
+loading state and error as signals and fits the zoneless, signal-based setup.
+`httpResource` is a **stable** API since Angular 22.0 (verified 2026-10-26 on
+[angular.dev](https://angular.dev/api/common/http/httpResource) and in the `@publicApi 22.0`
+tag of `@angular/common` 22.2.3); it was experimental in earlier versions.
+
 ## Consequences
 
 - **Positive:** a single Spring Boot version is shared by all services and bumped in one place;
