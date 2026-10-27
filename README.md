@@ -68,8 +68,8 @@ Java 25, Node.js 24, Docker with Compose. On Ubuntu you can install everything w
 ### Run locally
 
 ```bash
-cp .env.example .env
-docker compose -f infra/compose/docker-compose.yml up -d   # PostgreSQL
+cp .env.example .env                                       # then set POSTGRES_PASSWORD
+docker compose --env-file .env -f infra/compose/docker-compose.yml up -d   # PostgreSQL
 ./mvnw verify                                              # build and test the backend
 ./mvnw -pl services/core-service spring-boot:run           # http://localhost:8080
 cd frontend && npm ci && npm start                         # http://localhost:4200

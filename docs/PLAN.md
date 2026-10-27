@@ -19,9 +19,9 @@ Todavía no hace nada útil, pero demuestra que todas las piezas se conectan.
   *Por qué:* es el primer backend; prueba que Java, Spring y las pruebas funcionan.
 - [x] **4. Frontend mínimo** — app Angular que llama al ping y muestra la respuesta.
   *Por qué:* prueba que el navegador puede hablar con el backend.
-- [~] **5. PostgreSQL con Docker Compose** — base de datos levantada con un solo comando.
+- [x] **5. PostgreSQL con Docker Compose** — base de datos levantada con un solo comando.
   *Por qué:* nada se instala en tu máquina; todo corre en contenedores.
-- [ ] **6. Prueba de punta a punta** — navegador → Angular → Spring → PostgreSQL.
+- [~] **6. Prueba de punta a punta** — navegador → Angular → Spring → PostgreSQL.
   *Por qué:* confirmar que todo el camino funciona junto.
 - [ ] **7. CI y ADR 0001** — GitHub Actions compila y prueba en cada cambio; documentar decisiones.
   *Por qué:* nadie puede subir código roto sin que se note.
@@ -111,6 +111,9 @@ Todavía no hace nada útil, pero demuestra que todas las piezas se conectan.
 | **ESLint (lint)** | Revisa el código en busca de errores y malas prácticas sin ejecutarlo. |
 | **Docker / contenedor** | Empaqueta un programa con todo lo que necesita para correr igual en cualquier lugar. |
 | **Docker Compose** | Levanta varios contenedores juntos con un solo comando. |
+| **Volumen (Docker)** | Carpeta que Docker guarda fuera del contenedor para que los datos sobrevivan si el contenedor se borra. |
+| **Healthcheck (contenedor)** | Comando que Docker corre periódicamente para saber si el servicio de adentro ya está listo. |
+| **Variables de entorno / `.env`** | Configuración (como contraseñas) que se pasa al programa desde afuera, en lugar de escribirla en el código. |
 | **Flyway** | Aplica los cambios a la base de datos en orden, como si fueran commits del esquema. |
 | **Testcontainers** | Levanta una base de datos real en Docker solo mientras corren las pruebas. |
 | **CI (GitHub Actions)** | Robot que compila y prueba el código cada vez que subes cambios. |

@@ -94,7 +94,9 @@ docs/adr/               # Architecture Decision Records
 
 > Mantén esta sección actualizada cuando cambien los comandos.
 
-- Levantar infraestructura: `docker compose -f infra/compose/docker-compose.yml up -d`
+- Preparar variables (una vez): `cp .env.example .env` y define `POSTGRES_PASSWORD`
+- Levantar infraestructura: `docker compose --env-file .env -f infra/compose/docker-compose.yml up -d`
+- Ejecutar core-service sin Compose (Postgres desechable): `./mvnw -pl services/core-service spring-boot:test-run`
 - Compilar y probar todo el backend: `./mvnw verify`
 - Ejecutar un servicio: `./mvnw -pl services/core-service spring-boot:run`
 - Frontend: `cd frontend && npm ci && npm start` · pruebas: `npm test`
