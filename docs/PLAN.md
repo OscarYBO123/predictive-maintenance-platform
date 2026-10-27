@@ -17,9 +17,9 @@ Todavía no hace nada útil, pero demuestra que todas las piezas se conectan.
   funciona igual en cualquier máquina.
 - [x] **3. core-service mínimo** — Spring Boot con `GET /api/v1/ping`, health check y pruebas.
   *Por qué:* es el primer backend; prueba que Java, Spring y las pruebas funcionan.
-- [~] **4. Frontend mínimo** — app Angular que llama al ping y muestra la respuesta.
+- [x] **4. Frontend mínimo** — app Angular que llama al ping y muestra la respuesta.
   *Por qué:* prueba que el navegador puede hablar con el backend.
-- [ ] **5. PostgreSQL con Docker Compose** — base de datos levantada con un solo comando.
+- [~] **5. PostgreSQL con Docker Compose** — base de datos levantada con un solo comando.
   *Por qué:* nada se instala en tu máquina; todo corre en contenedores.
 - [ ] **6. Prueba de punta a punta** — navegador → Angular → Spring → PostgreSQL.
   *Por qué:* confirmar que todo el camino funciona junto.
@@ -102,6 +102,13 @@ Todavía no hace nada útil, pero demuestra que todas las piezas se conectan.
 | **`@ServiceConnection`** | Anotación que conecta la app al contenedor de pruebas sin configurar URL ni contraseña a mano. |
 | **Angular** | Framework para crear la interfaz web (lo que ve el usuario). |
 | **Proxy (Angular)** | En desarrollo, redirige las llamadas del frontend al backend. |
+| **Componente standalone** | Componente de Angular que declara sus propias dependencias, sin necesitar un `NgModule`. |
+| **Signal** | Variable "reactiva" de Angular: cuando cambia su valor, la pantalla se actualiza sola. |
+| **Zoneless** | Angular sin `zone.js`: la pantalla se actualiza solo cuando cambia un signal, no "por si acaso". |
+| **`httpResource`** | Forma de Angular de pedir datos por HTTP que entrega el resultado, la carga y el error como signals. |
+| **Lazy loading** | Cargar el código de una pantalla solo cuando el usuario entra a ella, para que la app abra más rápido. |
+| **Vitest** | Herramienta que corre las pruebas unitarias del frontend. |
+| **ESLint (lint)** | Revisa el código en busca de errores y malas prácticas sin ejecutarlo. |
 | **Docker / contenedor** | Empaqueta un programa con todo lo que necesita para correr igual en cualquier lugar. |
 | **Docker Compose** | Levanta varios contenedores juntos con un solo comando. |
 | **Flyway** | Aplica los cambios a la base de datos en orden, como si fueran commits del esquema. |

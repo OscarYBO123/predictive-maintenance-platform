@@ -1,0 +1,23 @@
+<section class="ping" aria-live="polite">
+  <h2>Backend connectivity</h2>
+
+  @if (ping.isLoading()) {
+    <p class="ping__state">Contacting core-service…</p>
+  } @else if (ping.error()) {
+    <p class="ping__state ping__state--error" data-testid="ping-error">
+      core-service is unreachable.
+    </p>
+  } @else if (ping.hasValue()) {
+    @let response = ping.value();
+    <dl class="ping__details" data-testid="ping-result">
+      <dt>Status</dt>
+      <dd [class.ping__ok]="response.status === 'UP'">{{ response.status }}</dd>
+      <dt>Service</dt>
+      <dd>{{ response.service }}</dd>
+      <dt>Timestamp</dt>
+      <dd>{{ response.timestamp | date: 'medium' }}</dd>
+    </dl>
+  }
+
+  <button type="button" (click)="retry()" [disabled]="ping.isLoading()">Ping again</button>
+</section>
