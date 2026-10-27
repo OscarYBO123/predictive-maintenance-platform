@@ -25,13 +25,14 @@ Todavía no hace nada útil, pero demuestra que todas las piezas se conectan.
   *Por qué:* confirmar que todo el camino funciona junto.
 - [x] **7. CI y ADR 0001** — GitHub Actions compila y prueba en cada cambio; documentar decisiones.
   *Por qué:* nadie puede subir código roto sin que se note.
-- [~] **8. Publicar en GitHub** — crear el repo, hacer push y ver el CI en verde.
+- [x] **8. Publicar en GitHub** — crear el repo, hacer push y ver el CI en verde.
+  Repo: https://github.com/OscarYBO123/predictive-maintenance-platform
 
 ## Etapa 2 — Núcleo SaaS
 
 **Objetivo:** la parte "administrativa": empresas, plantas, máquinas y técnicos, con login.
 
-- [ ] **1. Modelo de datos** — tablas con migraciones de Flyway.
+- [~] **1. Modelo de datos** — tablas con migraciones de Flyway.
 - [ ] **2. API REST** — crear, consultar, editar y borrar, con validaciones y documentación OpenAPI.
 - [ ] **3. Keycloak** — servidor de login; el frontend inicia sesión con OIDC.
 - [ ] **4. Multi-tenant** — cada empresa solo ve sus propios datos.
@@ -122,6 +123,8 @@ Todavía no hace nada útil, pero demuestra que todas las piezas se conectan.
 | **Artifact (CI)** | Archivo que el CI guarda al terminar (por ejemplo, reportes de pruebas) para descargarlo después. |
 | **Permisos mínimos** | Dar al CI solo los permisos que necesita (aquí, solo leer el repo), para limitar el daño si algo sale mal. |
 | **Dependabot** | Bot de GitHub que revisa si hay versiones nuevas de tus dependencias y abre PRs para actualizarlas. |
+| **gitleaks** | Herramienta que busca contraseñas o llaves filtradas por error en el historial de Git. |
+| **Topics (GitHub)** | Etiquetas del repo que ayudan a que otros lo encuentren por tecnología o tema. |
 | **ADR** | Documento corto que explica una decisión técnica y por qué se tomó. |
 | **Microservicio** | Programa pequeño con una sola responsabilidad que habla con otros. |
 | **Kafka** | "Cinta transportadora" de mensajes entre servicios. |

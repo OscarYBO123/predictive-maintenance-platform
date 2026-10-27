@@ -115,7 +115,8 @@ docs/adr/               # Architecture Decision Records
 
 ## Estado actual
 
-- **Etapa actual:** 1 — Cimientos (walking skeleton). En progreso.
+- **Etapa actual:** 2 — Núcleo SaaS. Pendiente de planificar.
+- **Etapa 1:** completada (2026-10-26). Repo: https://github.com/OscarYBO123/predictive-maintenance-platform
 - **Entorno:** Ubuntu, Java 25, Node 24, Angular CLI 22, Docker 29, Compose 5, GitHub CLI.
 
 ### Roadmap
