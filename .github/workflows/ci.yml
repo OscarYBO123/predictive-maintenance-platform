@@ -1,7 +1,10 @@
 name: CI
 
+# Pushes to main validate what was merged; every other branch is validated through its PR,
+# so each PR runs CI once instead of twice (push + pull_request).
 on:
   push:
+    branches: [main]
   pull_request:
 
 # Least privilege: jobs can only read the repository.
