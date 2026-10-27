@@ -81,6 +81,16 @@ Todavía no hace nada útil, pero demuestra que todas las piezas se conectan.
 
 ---
 
+## Pendientes técnicos
+
+> Cosas que decidimos posponer a propósito, con el motivo y cuándo retomarlas.
+
+- [ ] **Maven 3.10** — seguimos en 3.9.16 (sigue mantenida). No necesitamos nada de la 3.10 y trae
+  cambios incompatibles (validación de POM más estricta, otro orden del classpath, cambios en el
+  Super POM). *Retomar:* cuando salga la 3.10.1. Se cerró el PR #1 de Dependabot.
+
+---
+
 ## Glosario mínimo
 
 | Término | Qué es, en una línea |
