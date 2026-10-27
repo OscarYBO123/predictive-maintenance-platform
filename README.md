@@ -1,5 +1,7 @@
 # Predictive Maintenance Platform
 
+[![CI](https://github.com/OscarYBO123/predictive-maintenance-platform/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/OscarYBO123/predictive-maintenance-platform/actions/workflows/ci.yml?query=branch%3Amain)
+
 Multi-tenant SaaS platform for **industrial predictive maintenance**. Machines stream telemetry
 in real time; the platform detects anomalies, shows them on a live dashboard, and an AI agent
 explains them, checks technician availability and schedules maintenance.
