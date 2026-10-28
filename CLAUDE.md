@@ -25,6 +25,9 @@ Su objetivo es **aprender arquitectura moderna y a dirigir IA**, no solo obtener
   dentro del mismo commit del paso.
 - Si en un paso aparece un término técnico nuevo, agrégalo al glosario de `docs/PLAN.md` con una
   explicación de una línea, pensada para alguien que apenas lo conoce.
+- Cuando un paso del proyecto toque un tema del "Plan de aprendizaje" de `docs/PLAN.md`, al
+  terminar recuérdame qué capítulo o concepto leer y márcalo como `[~]` (en el mismo commit del
+  paso). El `[x]` lo pongo yo cuando lo haya leído y explicado con mis palabras.
 
 ## Modo práctica
 

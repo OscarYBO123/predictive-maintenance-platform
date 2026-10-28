@@ -103,6 +103,95 @@ Todavía no hace nada útil, pero demuestra que todas las piezas se conectan.
 
 ---
 
+## Plan de aprendizaje
+
+> Lo que necesito dominar para defender cada decisión del proyecto en una entrevista.
+> Misma leyenda: `[x]` hecho · `[~]` en curso · `[ ]` pendiente
+
+### Hábito de lectura
+
+- 15 a 20 minutos al día, a la misma hora. Meta: 1 capítulo por semana.
+- Al terminar cada capítulo, explicarlo en 3 a 5 líneas con mis palabras y compartirlo con Claude.
+- Si un capítulo se pone pesado, saltar al siguiente. Leer lo que sirve a la etapa actual, no todo en orden.
+
+### Bloque 0 — Fundamentos de herramientas (ahora, en paralelo con la etapa 2)
+
+- [ ] **Git:** ramas, merge vs. squash, rebase, remotos y resolver conflictos. *Recurso: libro Pro Git, gratuito y en español.*
+- [ ] **Docker:** imagen vs. contenedor, volúmenes, redes y Compose.
+- [ ] **Terminal de Linux:** navegación, permisos, procesos y variables de entorno.
+- [ ] **CI/CD:** leer y modificar un workflow de GitHub Actions sin ayuda.
+
+### Libro 1 — *Fundamentos de la arquitectura de software* (Richards y Ford, 2.ª ed., en español)
+
+**Antes y durante la etapa 2**
+- [ ] Cap. 1 — Introducción
+- [ ] Cap. 2 — Pensamiento arquitectónico
+- [ ] Cap. 4 — Características arquitectónicas definidas
+- [ ] Cap. 5 — Identificar las características arquitectónicas
+- [ ] Cap. 21 — Decisiones arquitectónicas *(los ADRs que ya escribimos)*
+
+**Etapas 2 y 3**
+- [ ] Cap. 3 — Modularidad
+- [ ] Cap. 8 — Pensamiento basado en componentes
+- [ ] Cap. 14 — Estilo de arquitectura basada en servicios
+- [ ] Cap. 18 — Arquitectura de microservicios
+
+**Etapas 3 y 4**
+- [ ] Cap. 15 — Estilo de arquitectura dirigida por eventos
+- [ ] Cap. 19 — Elegir el estilo arquitectónico adecuado
+
+**Etapa 6 y cierre**
+- [ ] Cap. 22 — Analizar el riesgo de la arquitectura
+- [ ] Cap. 23 — Diagramación de la arquitectura
+- [ ] Cap. 25 — Habilidades de negociación y liderazgo
+- [ ] Cap. 27 — Las leyes de la arquitectura del software, revisitadas
+
+### Libro 2 — *Designing Data-Intensive Applications* (Kleppmann, en inglés) — desde la etapa 3
+
+Solo los temas que toca cada etapa. Leerlo en inglés también es práctica del idioma.
+
+- [ ] Etapa 3: *stream processing* y logs de eventos (cómo funciona Kafka por dentro)
+- [ ] Etapa 4: los problemas de los sistemas distribuidos (fallas de red, relojes, procesos)
+- [ ] Etapa 4: transacciones y consistencia
+
+### Conceptos que debo poder explicar, por etapa
+
+**Etapa 2 — Núcleo SaaS**
+- [ ] OAuth2 vs. OIDC, y qué contiene un JWT
+- [ ] Control de acceso por roles (RBAC)
+- [ ] Estrategias multi-tenant y sus trade-offs
+- [ ] Relaciones en JPA y el problema N+1
+- [ ] Validación y manejo de errores en APIs (ProblemDetail, RFC 9457)
+
+**Etapa 3 — Telemetría en vivo**
+- [ ] Kafka: topics, particiones, consumer groups y offsets
+- [ ] Comunicación síncrona vs. asíncrona: cuándo usar cada una
+- [ ] WebSocket vs. polling
+- [ ] Bases de datos de series de tiempo
+
+**Etapa 4 — Anomalías**
+- [ ] Idempotencia y entrega "al menos una vez"
+- [ ] Consistencia eventual
+- [ ] Patrón outbox
+- [ ] Reintentos y circuit breaker
+
+**Etapa 5 — Agente de IA**
+- [ ] Cómo funciona un LLM a nivel práctico (tokens, contexto, temperatura)
+- [ ] Tool calling: cómo una IA usa herramientas
+- [ ] RAG y embeddings
+- [ ] Riesgos de seguridad: prompt injection y acciones sin confirmar
+
+**Etapa 6 — Producción**
+- [ ] Kubernetes: pods, deployments y services
+- [ ] Observabilidad: logs, métricas y trazas
+
+**Transversales (en modo práctica)**
+- [ ] Java moderno: records, sealed classes, pattern matching e hilos virtuales
+- [ ] Angular moderno: signals, httpResource y zoneless
+- [ ] Inglés técnico: leer documentación y escribir commits, README y ADRs
+
+---
+
 ## Glosario mínimo
 
 | Término | Qué es, en una línea |
