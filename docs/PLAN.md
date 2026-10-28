@@ -116,10 +116,10 @@ Todavía no hace nada útil, pero demuestra que todas las piezas se conectan.
 
 ### Bloque 0 — Fundamentos de herramientas (ahora, en paralelo con la etapa 2)
 
-- [ ] **Git:** ramas, merge vs. squash, rebase, remotos y resolver conflictos. *Recurso: libro Pro Git, gratuito y en español.*
-- [ ] **Docker:** imagen vs. contenedor, volúmenes, redes y Compose.
-- [ ] **Terminal de Linux:** navegación, permisos, procesos y variables de entorno.
-- [ ] **CI/CD:** leer y modificar un workflow de GitHub Actions sin ayuda.
+- [~] **Git:** ramas, merge vs. squash, rebase, remotos y resolver conflictos. *Recurso: libro Pro Git, gratuito y en español.*
+- [~] **Docker:** imagen vs. contenedor, volúmenes, redes y Compose.
+- [~] **Terminal de Linux:** navegación, permisos, procesos y variables de entorno.
+- [~] **CI/CD:** leer y modificar un workflow de GitHub Actions sin ayuda.
 
 ### Libro 1 — *Fundamentos de la arquitectura de software* (Richards y Ford, 2.ª ed., en español)
 
